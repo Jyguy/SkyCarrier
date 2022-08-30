@@ -1,29 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "skycarrier",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "SkyCarrier",
+  "description": "A Hypixel Skyblock quality of life mod for modern Minecraft versions.",
   "authors": [
-    "Me!"
+    "Spiget"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/Jyguy/SkyCarrier"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GNU LGPLv3",
+  "icon": "assets/skycarrier/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "xyz.reknown.skycarrier.SkyCarrier"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "skycarrier.mixins.json"
   ],
 
   "depends": {
@@ -31,8 +30,5 @@
     "fabric-api": "*",
     "minecraft": "~1.19",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
