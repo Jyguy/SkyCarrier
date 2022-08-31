@@ -19,6 +19,14 @@ public class SkyCarrierConfig extends Vigilant {
     )
     @Getter private String apiKey = "";
 
+    @Property(
+            type = PropertyType.SWITCH,
+            name = "Blocks in the Way Hider",
+            description = "Hides the 'There are blocks in the way!' message when teleporting.",
+            category = "Spam"
+    )
+    @Getter private boolean blocksInTheWayHidden = false;
+
     public SkyCarrierConfig() {
         super(new File("./config/skycarrier.toml"), "SkyCarrier");
         initialize();

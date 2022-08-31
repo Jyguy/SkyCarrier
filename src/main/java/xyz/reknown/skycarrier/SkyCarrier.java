@@ -33,6 +33,8 @@ public class SkyCarrier implements ModInitializer {
 			if (str.startsWith("Your new API key is ")) {
 				config.setApiKey(str.substring(20, 56)); // key is 36 characters long
 				MinecraftClient.getInstance().player.sendMessage(Text.literal(ChatColor.GREEN + "[SkyCarrier] Successfully set your API key!"));
+			} else if (config.isBlocksInTheWayHidden() && str.equals("There are blocks in the way!")) {
+				return ActionResult.FAIL;
 			}
 
 			return ActionResult.PASS;
